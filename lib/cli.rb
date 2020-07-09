@@ -29,6 +29,9 @@ class CommandLineInterface
             @@client_name = input
         if Client.find_by(name: @@client_name)
             client_interface
+        elsif input == "Admin"
+            puts "Uh-oh, I don't think you're supposed to be here."
+            client_identity
         else
             puts "** Hmm, we can't find you in our databese. **"
             puts "** Would you like to create a new profile for yourself? **"
